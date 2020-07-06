@@ -19,6 +19,16 @@ public class DataStructure {
 
         twoDirectionalList.printList();
 
+        DirectionalList oneList = new OneDirectionalList(
+                new String[] {"val11", "val12", "val13", "val14"});
+
+        oneList.printList();
+
+        DirectionalList twoList = new OneDirectionalList(
+                new String[] {"val21", "val22", "val23", "val24"});
+
+        twoList.printList();
+
     }
 
 }

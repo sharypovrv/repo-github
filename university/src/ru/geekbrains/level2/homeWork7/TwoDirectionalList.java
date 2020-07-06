@@ -4,6 +4,18 @@ public class TwoDirectionalList implements DirectionalList {
 
     private Node first;
 
+    public TwoDirectionalList() {
+
+    }
+
+    public TwoDirectionalList(String[] arr) {
+
+        for (String str : arr) {
+            this.add(str);
+        }
+
+    }
+
     @Override
     public void add(String val) {
         if (first == null) {

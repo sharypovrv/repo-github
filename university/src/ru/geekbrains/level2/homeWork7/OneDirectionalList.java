@@ -3,6 +3,14 @@ package ru.geekbrains.level2.homeWork7;
 public class OneDirectionalList implements DirectionalList {
     private Node first;
 
+    public OneDirectionalList(String[] arr) {
+
+        for (String str : arr) {
+            this.add(str);
+        }
+
+    }
+
     @Override
     public void add(String val) {
         if (first == null) {
@@ -105,7 +113,18 @@ public class OneDirectionalList implements DirectionalList {
 
     @Override
     public void printList() {
+        if (first == null) {
+            System.out.print("");
+            return;
+        }
 
+        Node current = first;
+
+        while (current != null) {
+            System.out.print(current.val + " ");
+            current = current.getNext();
+        }
+        System.out.println();
     }
 
     public class Node {
